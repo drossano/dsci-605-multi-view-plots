@@ -11,6 +11,7 @@ library(readxl)
 library(ggplot2)
 library(grid)
 library(gridExtra)
+library(colorspace)
 ```
 
 ## R Markdown
@@ -21,13 +22,20 @@ When you click the **Knit** button a document will be generated that includes bo
 
 ```{r}
 data = read_xlsx("Module8/Sampledata2.xlsx")
+
+n = length(unique(data$Year))
+year_col = diverge_hcl(n)
+
+
+histogram <- ggplot(data, aes(x = CrimeRate, color=as.factor(Year), fill = as.factor(Year))) +
+  geom_histogram(position = "dodge", alpha=0.5, bins=10) +
+  scale_color_manual(values = year_col)+
+  scale_fill_manual(values = year_col)+
+  labs(title= "Crime Rate by Year", color= "Year", fill="Year") + ylab("Count") +
+  xlab("Crime Rate")
+
+scatterplot <- ggplot(data, aes(Year, CrimeRate)) + geom_point()
+
+boxplot <- ggplot(data, aes(as.factor(Year), CrimeRate)) +geom_boxplot()
+grid.arrange(histogram, scatterplot, boxplot)
 ```
-## Including Plots
-
-You can also embed plots, for example:
-
-```{r pressure, echo=FALSE}
-plot(pressure)
-```
-
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
