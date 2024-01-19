@@ -1,0 +1,51 @@
+---
+title: 'Multiple-view plots including histogram, boxplots and scatter plot with data provided'
+output:
+  pdf_document: default
+  html_notebook: default
+---
+
+This lab is preconfigured to include all dependencies (libraries, packages, and datasets) you'll need to complete your work in RStudio. You can practice, run test cases, and work on assignments from your browser.
+
+# Assignment Overview
+In this lab, you are required to use the skills learned from this module to create an R Markdown which includes a histogram, a boxplot and a scatter plot and a multiple-view plot including the histogram, boxplot and scatter plot.
+
+
+#### The basic steps should be included in this lab: 
+1. Please download and set your working directory to the folder where the data "Sampledata2.xlsx" is stored.
+2. Install and load required packages.
+3. Load and inspect the dataset. 
+4. Plot a grouped histogram for the variable "CrimeRate" based on the groups from the variable "Year" using ggplot(). 
+5. Plot a scatter plot for the variable "Year" and "Crimerate" using ggplot().
+6. Plot a grouped box plot for the variable "Crimerate" based on the groups from the variable "Year" using ggplot().
+7. Arrange all the three plots in one page using grid.arrange().
+8. Please name your file as “Yourname_Multiple-view layout.Rmd”.
+9. Please knit your R Markdown file into a HTML file and submit the HTML file.
+
+##### Important Reminder on Knit in this In-Browser RStudio option for this lab
+This lab is hosted in an iframe that facilitates lab management features but consequently will prevent Knitting to HTML or Preview Notebook working by default. However, you can still Knit your files in lab by taking the following steps:
+- Step 1: Go to the "Help" icon in your lab toolbar (top right corner).
+- Step 2: Select the "Switch Back to the Old Experience" hyperlink (right click select if you'd like to keep both the submit and knit windows open)
+- Step 3: Knit your files to HTML or Preview Notebook.  
+You should now be able to load and preview them in your lab appropriately. 
+
+More details can be found in the RStudio Lab - In-Browser Option Reading :
+https://www.coursera.org/learn/ball-state-university-data-visualization/supplement/E9jjS/rstudio-lab-in-browser-option
+
+### Grading Criteria
+This week, your code will be graded on the following elements:
+1. Your code should match the sequential operations required by the instructor. 
+2. Your code chunks should not be hidden. 
+3. You should use ggplot() to create a grouped histogram.  
+4. You should use ggplot() to create a scatter plot.  
+5. You should use ggplot() to create a grouped boxplot.  
+6. You should use grid.arrange() to make the three plots you created in Steps2-3 to one plot. 
+7. Your graphs should include legend, title and x and y labels.  
+8. Your code should be run successfully.  
+9. You should provide comments for each step. 
+10. You should create and save a file with the extension of .html in your /home/rstudio directory (if you're using the lab)
+
+### How to Submit Your Work for a Grade
+This week you'll grade your own work in the following Step 2: Self-Check Mutiple-view plots including histogram, boxplots and scatter plot with data provided Quiz. If you're using the In-Browser RStudio lab you do NOT need to use the "Submit Assignment" button this week.
+
+https://www.coursera.org/learn/ball-state-university-data-visualization/exam/YGZ7W/step-2-self-check-mutiple-view-plots-including-histogram-boxplots-and-scatter
